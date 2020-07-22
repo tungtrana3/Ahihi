@@ -7,8 +7,8 @@ let mongoose = require('mongoose')
 let handleAccountJwt = require('../handleAccountJwt')
 let fs = require('fs')
 const path = require('path')
-let api = require('../config')
-API_URL = api.API_URL
+// let api = require('../config')
+// API_URL = api.API_URL
 const formidable = require('formidable');
 
 function objectIsEmpty(object) {

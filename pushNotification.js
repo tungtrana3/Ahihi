@@ -1,4 +1,4 @@
-const config = require('./config')
+// const config = require('./config')
 var FCM = require('fcm-node')
 let serverKey = require('./shopping-server-project-firebase-adminsdk-cd9rr-db9f688854.json')
 
