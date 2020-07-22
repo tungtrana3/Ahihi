@@ -80,7 +80,7 @@ function onError(error) {
 /**
  * Event listener for HTTP server "listening" event.
  */
-mongoose.connect('mongodb+srv://TungTrana3:Mobile%4012345@cluster0.ti2bm.mongodb.net/AHIHISHOPDB?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://TungTrana3:Mobile%4012345@cluster0.ti2bm.mongodb.net/AhihiShopDB?authSource=admin&replicaSet=atlas-djj53t-shard-0&readPreference=primary&appname=MongoDB%20Compass&ssl=true',
     {
         useNewUrlParser: true,
         useUnifiedTopology: true,
