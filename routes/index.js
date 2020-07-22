@@ -9,4 +9,7 @@ router.get('/', function (req, res, next) {
   // req.session.isLogin = false
   return res.render('login/login');
 });
+router.get('/login', function (req, res, next) {
+  return res.render('login/login');
+});
 module.exports = router;
