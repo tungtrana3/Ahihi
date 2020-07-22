@@ -13,10 +13,14 @@ var FormData = require('form-data');
 var fs = require('fs');
 
 //Navigation
-router.get('', function (req, res, next) {
-  req.session.isLogin = false
-  return res.render('login/login', { mgs: "" });
+router.get('/', function (req, res, next) {
+  // req.session.isLogin = false
+  return res.render('login/login');
 });
+// router.get('/', function (req, res, next) {
+//   req.session.isLogin = false
+//   return res.render('login/login', { mgs: "" });
+// });
 
 router.get('/home', function (req, res) {
   if (req.session.isLogin) {
