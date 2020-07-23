@@ -7,8 +7,8 @@ let mongoose = require('mongoose')
 let handleAccountJwt = require('../handleAccountJwt')
 let fs = require('fs')
 const path = require('path')
-// let api = require('../config')
-// API_URL = api.API_URL
+let api = require('../config')
+API_URL = api.API_URL
 const formidable = require('formidable');
 
 function objectIsEmpty(object) {
@@ -18,18 +18,13 @@ function objectIsEmpty(object) {
   return false
 }
 exports.getListProductType = async (req, res) => {
-  console.log("ádfadf")
   try {
     let page = 0//req.body.page
     let limit = 10//req.body.limit
-    console.log("11111111111111")
     const listProductType = await ProductType.find().skip(page*limit).limit(limit)
-    console.log("22222222222")
     const count = ProductType.find().length
-    console.log("3333333333")
     return res.render('product/ProductType', { listProductType, mgs: "", countPage: count });
   } catch (error) {
-    console.log("4444444")
     return res.send({ mgs: 'Có lỗi xảy ra! Lấy danh sách thất bại' });;
   }
 }
