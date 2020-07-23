@@ -93,19 +93,19 @@ function onError(error) {
 //             console.log('Connect database successfully!')
 //         }
 //     })
-mongoose.connect('mongodb://localhost:2x7017/ShoppingDB',
-    {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-        useFindAndModify: false
-    },
-    (err) => {
-        if (err) {
-            console.log(err)
-        } else {
-            console.log('Connect database successfully!')
-        }
-    })
+// mongoose.connect('mongodb://localhost:2x7017/ShoppingDB',
+//     {
+//         useNewUrlParser: true,
+//         useUnifiedTopology: true,
+//         useFindAndModify: false
+//     },
+//     (err) => {
+//         if (err) {
+//             console.log(err)
+//         } else {
+//             console.log('Connect database successfully!')
+//         }
+//     })
 
 function onListening() {
   var addr = server.address();
