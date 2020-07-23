@@ -24,9 +24,9 @@ exports.getListProductType = async (req, res) => {
     let limit = 10//req.body.limit
     console.log("11111111111111")
     const listProductType = await ProductType.find().skip(page*limit).limit(limit)
-    console.log("22222222222")
-    const count = ProductType.find().length
-    console.log("3333333333")
+    console.log("22222222222",listProductType)
+    let count = ProductType.find()
+    console.log("3333333333",count.length) 
     return res.render('product/ProductType', { listProductType, mgs: "", countPage: count });
   } catch (error) {
     console.log("4444444")
