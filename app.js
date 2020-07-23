@@ -4,8 +4,9 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var indexRouter = require('./routes/index');
 var Router = require('./routes/routeServer');
-var routesApi = require('./routes/routes');
+var usersRouter = require('./routes/users');
 
 // load the things we need
 var expressSession = require('express-session');
@@ -53,7 +54,7 @@ app.use(cookieParser('secret'));
 app.use(expressSession({ cookie: { maxAge: 60000 } }));
 
 app.use('/', Router);
-app.use('/api', routesApi)
+app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {

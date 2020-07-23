@@ -18,12 +18,16 @@ function objectIsEmpty(object) {
   return false
 }
 exports.getListProductType = async (req, res) => {
+  console.log("ádfadf")
   try {
     let page = 0//req.body.page
     let limit = 10//req.body.limit
+    console.log("11111111111111")
     const listProductType = await ProductType.find().skip(page*limit).limit(limit)
-    // let count = ProductType.find
-    return res.render('product/ProductType', { listProductType, mgs: "", countPage: 'count' });
+    console.log("22222222222")
+    const count = ProductType.find().length
+    console.log("3333333333")
+    return res.render('product/ProductType', { listProductType, mgs: "", countPage: count });
   } catch (error) {
     console.log("4444444")
     return res.send({ mgs: 'Có lỗi xảy ra! Lấy danh sách thất bại' });;
