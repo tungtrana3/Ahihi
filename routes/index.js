@@ -9,16 +9,16 @@ router.get('/', function (req, res, next) {
   // req.session.isLogin = false
   return res.render('login/login');
 });
-router.route('/login')
-  .post(AccountController.login)
-router.get('/home', function (req, res) {
-  // if (req.session.isLogin) {
-    return res.render('pages/index');
-  // }
-  // else {
-    // return res.render('login/login');
-  // }
-});
+// router.route('/login')
+//   .post(AccountController.login)
+// router.get('/home', function (req, res) {
+//   // if (req.session.isLogin) {
+//     return res.render('pages/index');
+//   // }
+//   // else {
+//     // return res.render('login/login');
+//   // }
+// });
 //Product
 // router.use('/productType', proType);
 // router.use('/account', routeAccount);
