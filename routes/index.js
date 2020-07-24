@@ -5,21 +5,19 @@ var AccountController = require('../controller/AccountController');
 // var proType = require('./routeProductType');
 // var routeAccount = require('./routeAccount');
 // var routeProduct = require('./routeProduct');
-var FormData = require('form-data');
-var fs = require('fs');
 router.get('/', function (req, res, next) {
-  req.session.isLogin = false
+  // req.session.isLogin = false
   return res.render('login/login');
 });
 router.route('/login')
   .post(AccountController.login)
 router.get('/home', function (req, res) {
-  if (req.session.isLogin) {
+  // if (req.session.isLogin) {
     return res.render('pages/index');
-  }
-  else {
-    return res.render('login/login');
-  }
+  // }
+  // else {
+    // return res.render('login/login');
+  // }
 });
 //Product
 // router.use('/productType', proType);
