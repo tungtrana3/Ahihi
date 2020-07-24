@@ -8,8 +8,6 @@ let mongoose = require("mongoose");
 let handleAccountJwt = require("../../ServerShopping/handleAccountJwt");
 let fs = require("fs");
 const path = require("path");
-let api = require("../../ServerShopping/config");
-API_URL = api.API_URL;
 
 exports.addProduct = async (req, res) => {
   let accountId = handleAccountJwt.getAccountId(req);
