@@ -9,6 +9,8 @@ var passport = require('passport');
 var cors = require('cors')
 var formData = require('express-form-data');
 
+var routeServer = require('./routes/routeServer');
+var routeApi = require('./routes/routes');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
@@ -41,8 +43,8 @@ app.use(cookieParser('secret'));
 app.use(expressSession({ cookie: { maxAge: 60000 } }));
 // app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/', routeServer);
+app.use('/api', routeApi);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
