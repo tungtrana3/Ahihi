@@ -13,8 +13,8 @@ let multer = require('multer')
 //Navigation
 proType.get('/', ProductController.getListProductType)
 
-proType.route('/getTypePage')
-  .post(ProductController.getListPageType)
+// proType.route('/getTypePage')
+//   .post(ProductController.getListPageType)
   
 proType.route('/addType')
   .post(ProductController.addProductType1)
