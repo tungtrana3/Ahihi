@@ -3,29 +3,25 @@ var express = require('express');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
-const expressSession = require('express-session');
-const bodyParser = require('body-parser');
-const passport = require('passport');
-const routes = require('./routes/routeServer')
-const routesApi = require('./routes/routes')
-const cors = require('cors')
-const mongoose = require('mongoose')
-const multer = require('multer')
-const upload = multer({ dest: 'public/img' })
-const flash = require('connect-flash');
-const fs = require('fs');
-const formData = require('express-form-data');
+var expressSession = require('express-session');
+var bodyParser = require('body-parser');
+var passport = require('passport');
+var cors = require('cors')
+var formData = require('express-form-data');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
 var app = express();
 app.use(formData.parse());
+app.use('/fonts', express.static('public/fonts'));
 app.use('/css', express.static('public/css'));
 app.use('/js', express.static('public/js'));
 app.use('/img', express.static('public/img'));
+app.use(cors())
+
 // view engine setup
-app.set('views', path.join(__dirname, 'views'));
+// app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 app.use(logger('dev'));
@@ -42,7 +38,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(cookieParser('secret'));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(expressSession({ cookie: { maxAge: 60000 } }));
+// app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
