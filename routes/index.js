@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
-var AccountController = require('../controller/AccountController');
+// var AccountController = require('../controller/AccountController');
 // var proType = require('./routeProductType');
 // var routeAccount = require('./routeAccount');
 // var routeProduct = require('./routeProduct');
