@@ -37,7 +37,7 @@ app.use(expressSession({
   secret: 'keyboard cat',
 }))
 app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(passport.initialize());
 app.use(passport.session());
