@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
 var bodyParser = require('body-parser');
-var AccountController = require('../controller/AccountController');
+// var AccountController = require('../controller/AccountController');
 // var proType = require('./routeProductType');
 // var routeAccount = require('./routeAccount');
 // var routeProduct = require('./routeProduct');
@@ -9,8 +9,8 @@ router.get('/', function (req, res, next) {
   // req.session.isLogin = false
   return res.render('login/login');
 });
-router.route('/login')
-  .post(AccountController.login)
+// router.route('/login')
+//   .post(AccountController.login)
 router.get('/home', function (req, res) {
   return res.render('pages/index');
   // if (req.session.isLogin) {
