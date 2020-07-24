@@ -9,8 +9,6 @@ var passport = require('passport');
 var cors = require('cors')
 var formData = require('express-form-data');
 
-var routeServer = require('./routes/routeServer');
-var routeApi = require('./routes/routes');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 
