@@ -1,12 +1,12 @@
-var passport = require('passport')
+// var passport = require('passport')
 var Account = require('../models/account')
-var jwt = require('jsonwebtoken')
-let request = require('request-promise')
-let base64 = require('base-64')
-let mongoose = require('mongoose')
-let handleAccountJwt = require('../handleAccountJwt')
-let fs = require('fs')
-const path = require('path')
+// var jwt = require('jsonwebtoken')
+// let request = require('request-promise')
+// let base64 = require('base-64')
+// let mongoose = require('mongoose')
+// let handleAccountJwt = require('../handleAccountJwt')
+// let fs = require('fs')
+// const path = require('path')
 
 exports.login = async (req, res) => {
   let username = req.body.username
