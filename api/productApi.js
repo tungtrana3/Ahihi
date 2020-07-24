@@ -1,14 +1,14 @@
 var passport = require("passport");
-var Account = require("../models/account");
-var ProductType = require("../models/ProductTypes");
+var Account = require("../../ServerShopping/models/account");
+var ProductType = require("../../ServerShopping/models/ProductTypes");
 var jwt = require("jsonwebtoken");
 let request = require("request-promise");
 let base64 = require("base-64");
 let mongoose = require("mongoose");
-let handleAccountJwt = require("../handleAccountJwt");
+let handleAccountJwt = require("../../ServerShopping/handleAccountJwt");
 let fs = require("fs");
 const path = require("path");
-let api = require("../config");
+let api = require("../../ServerShopping/config");
 API_URL = api.API_URL;
 
 exports.addProduct = async (req, res) => {
