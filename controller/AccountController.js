@@ -23,8 +23,8 @@ exports.login = async (req, res) => {
       }
     )
     if (check !== null) {
-      req.session.isLogin = true;
-      req.session.user = username;
+      // req.session.isLogin = true;
+      // req.session.user = username;
       return res.json({ success: true, mgs: "" });
     } else {
       return res.json({ success: false, mgs: 'Tên đăng nhập hoặc mật khẩu không đúng' });

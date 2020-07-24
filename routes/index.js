@@ -12,12 +12,13 @@ router.get('/', function (req, res, next) {
 router.route('/login')
   .post(AccountController.login)
 router.get('/home', function (req, res) {
-  if (req.session.isLogin) {
-    return res.render('pages/index');
-  }
-  else {
-    return res.render('login/login');
-  }
+  return res.render('pages/index');
+  // if (req.session.isLogin) {
+  //   return res.render('pages/index');
+  // }
+  // else {
+  //   return res.render('login/login');
+  // }
 });
 //Product
 // router.use('/productType', proType);
